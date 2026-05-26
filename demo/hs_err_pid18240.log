@@ -1,0 +1,243 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes. Error detail: AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=18240, tid=7188
+#
+# JRE version:  (17.0.19+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.19+10-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dnet.bytebuddy.agent.attacher.dump= net.bytebuddy.agent.Attacher com.sun.tools.attach.VirtualMachine 22020 C:\Users\ENVIA DAKI\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar false 
+
+Host: 12th Gen Intel(R) Core(TM) i3-1215U, 8 cores, 3G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4830)
+Time: Thu May 21 18:19:06 2026 Hora oficial do Brasil elapsed time: 0.021006 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000226bc7e5a10):  JavaThread "Unknown thread" [_thread_in_vm, id=7188, stack(0x000000c4de300000,0x000000c4de400000)]
+
+Stack: [0x000000c4de300000,0x000000c4de400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x68cc89]  (no source info available)
+V  [jvm.dll+0x845d89]  (no source info available)
+V  [jvm.dll+0x847af8]  (no source info available)
+V  [jvm.dll+0x848183]  (no source info available)
+V  [jvm.dll+0x24d0bf]  (no source info available)
+V  [jvm.dll+0xa9497]  (no source info available)
+V  [jvm.dll+0x2eff70]  (no source info available)
+V  [jvm.dll+0x2e79df]  (no source info available)
+V  [jvm.dll+0x818b2e]  (no source info available)
+V  [jvm.dll+0x377771]  (no source info available)
+V  [jvm.dll+0x7f7175]  (no source info available)
+V  [jvm.dll+0x3fd5eb]  (no source info available)
+V  [jvm.dll+0x3ff221]  (no source info available)
+C  [jli.dll+0x52f8]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [KERNEL32.DLL+0x1259d]  (no source info available)
+C  [ntdll.dll+0x5af38]  (no source info available)
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff855b37058, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000226bc8226f0 GCTaskThread "GC Thread#0" [stack: 0x000000c4de400000,0x000000c4de500000] [id=27272]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8552e4bb0]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000226bc7e28b0] Heap_lock - owner thread: 0x00000226bc7e5a10
+
+Heap address: 0x00000000c4400000, size: 956 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c4400000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8556d8d39]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.014 Loaded shared library C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff73d050000 - 0x00007ff73d05e000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\java.exe
+0x00007ff905f90000 - 0x00007ff9061a7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff904590000 - 0x00007ff904654000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9034a0000 - 0x00007ff903870000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9039c0000 - 0x00007ff903ad1000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8d9eb0000 - 0x00007ff8d9ec8000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\jli.dll
+0x00007ff8f2ef0000 - 0x00007ff8f2f0e000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\VCRUNTIME140.dll
+0x00007ff904240000 - 0x00007ff9043ee000 	C:\Windows\System32\USER32.dll
+0x00007ff903990000 - 0x00007ff9039b6000 	C:\Windows\System32\win32u.dll
+0x00007ff904670000 - 0x00007ff904699000 	C:\Windows\System32\GDI32.dll
+0x00007ff8efde0000 - 0x00007ff8f0072000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4830_none_270fe7d773858e80\COMCTL32.dll
+0x00007ff903ae0000 - 0x00007ff903bfb000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9038f0000 - 0x00007ff90398a000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff905ea0000 - 0x00007ff905f47000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9046e0000 - 0x00007ff904711000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8fc610000 - 0x00007ff8fc61c000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\vcruntime140_1.dll
+0x00007ff8b9e90000 - 0x00007ff8b9f19000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\msvcp140.dll
+0x00007ff854ff0000 - 0x00007ff855c6b000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\server\jvm.dll
+0x00007ff904830000 - 0x00007ff9048e1000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9044e0000 - 0x00007ff904587000 	C:\Windows\System32\sechost.dll
+0x00007ff903240000 - 0x00007ff903268000 	C:\Windows\System32\bcrypt.dll
+0x00007ff905170000 - 0x00007ff905284000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff903de0000 - 0x00007ff903e51000 	C:\Windows\System32\WS2_32.dll
+0x00007ff903110000 - 0x00007ff90315d000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ff8f9050000 - 0x00007ff8f9084000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8f03e0000 - 0x00007ff8f03ea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9030f0000 - 0x00007ff903103000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ff902220000 - 0x00007ff902238000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff8d9ea0000 - 0x00007ff8d9eaa000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\jimage.dll
+0x00007ff900d30000 - 0x00007ff900f62000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff9053a0000 - 0x00007ff905730000 	C:\Windows\System32\combase.dll
+0x00007ff905730000 - 0x00007ff905807000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff8e5c90000 - 0x00007ff8e5cc2000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff903870000 - 0x00007ff9038eb000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8ce5d0000 - 0x00007ff8ce5f6000 	C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4830_none_270fe7d773858e80;C:\Users\ENVIA DAKI\.jdks\ms-17.0.19\bin\server
+
+VM Arguments:
+jvm_args: -Dnet.bytebuddy.agent.attacher.dump= 
+java_command: net.bytebuddy.agent.Attacher com.sun.tools.attach.VirtualMachine 22020 C:\Users\ENVIA DAKI\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar false 
+java_class_path (initial): C:\Users\ENVIA DAKI\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 62914560                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1002438656                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1002438656                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python314\Scripts\;C:\Python314\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ENVIA DAKI\AppData\Local\Microsoft\WindowsApps;C:\Users\ENVIA DAKI\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ENVIA DAKI\AppData\Roaming\npm
+USERNAME=ENVIA DAKI
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+TMP=C:\Users\ENVIAD~1\AppData\Local\Temp
+TEMP=C:\Users\ENVIAD~1\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4830)
+OS uptime: 1 days 3:09 hours
+
+CPU: total 8 (initial active 8) (8 cores per cpu, 1 threads per core) family 6 model 154 stepping 4 microcode 0x424, cx8, cmov, fxsr, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb
+Processor Information for processor 0
+  Max Mhz: 1200, Current Mhz: 1200, Mhz Limit: 1200
+Processor Information for processor 1
+  Max Mhz: 1200, Current Mhz: 1200, Mhz Limit: 1200
+Processor Information for processor 2
+  Max Mhz: 1200, Current Mhz: 1200, Mhz Limit: 1200
+Processor Information for processor 3
+  Max Mhz: 1200, Current Mhz: 1200, Mhz Limit: 1200
+Processor Information for processor 4
+  Max Mhz: 900, Current Mhz: 900, Mhz Limit: 900
+Processor Information for processor 5
+  Max Mhz: 900, Current Mhz: 900, Mhz Limit: 900
+Processor Information for processor 6
+  Max Mhz: 900, Current Mhz: 900, Mhz Limit: 900
+Processor Information for processor 7
+  Max Mhz: 900, Current Mhz: 900, Mhz Limit: 900
+
+Memory: 4k page, system-wide physical 3820M (17M free)
+TotalPageFile size 15596M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 59M, peak: 60M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.19+10-LTS) for windows-amd64 JRE (17.0.19+10-LTS), built on Apr 18 2026 18:24:40 by "MicrosoftCorporation" with MS VC++ 17.14 (VS2022)
+
+END.
